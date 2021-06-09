@@ -1,11 +1,9 @@
 import React,{Component} from 'react';
-import { Switch,Route,Link, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 class Footer extends Component{
 render(){
-        return(
-            <BrowserRouter>
-            
+        return(     
             <footer className="footer-section spad">
                 <div className="container">
                     <div className="newslatter-form">
@@ -71,26 +69,27 @@ render(){
                         </div>
                     </div>
                 </div>
+                <Router>
                 <div className="social-links-warp">
                     <div className="container">
                         <div className="social-links">
-                            <a href="" className="instagram"><i className="fa fa-instagram"></i><span>instagram</span></a>
-                            <a href="" className="pinterest"><i className="fa fa-pinterest"></i><span>pinterest</span></a>
-                            <a href="" className="facebook"><i className="fa fa-facebook"></i><span>facebook</span></a>
-                            <a href="" className="twitter"><i className="fa fa-twitter"></i><span>twitter</span></a>
-                            <a href="" className="youtube"><i className="fa fa-youtube"></i><span>youtube</span></a>
-                            <a href="" className="tumblr"><i className="fa fa-tumblr-square"></i><span>tumblr</span></a>
+                            <Link to="" className="instagram"><i className="fa fa-instagram"></i><span>instagram</span></Link>
+                            <Link to="" className="pinterest"><i className="fa fa-pinterest"></i><span>pinterest</span></Link>
+                            <Link to="" className="facebook"><i className="fa fa-facebook"></i><span>facebook</span></Link>
+                            <Link to="" className="twitter"><i className="fa fa-twitter"></i><span>twitter</span></Link>
+                            <Link to="" className="youtube"><i className="fa fa-youtube"></i><span>youtube</span></Link>
+                            <Link to="" className="tumblr"><i className="fa fa-tumblr-square"></i><span>tumblr</span></Link>
                         </div>
                     </div>
 
-        <div className="container text-center pt-5">
-            <p>
-                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Huy Bappp  
-            </p>
-        </div>
-        </div>
+                    <div className="container text-center pt-5">
+                        <p>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Huy Bappp  
+                        </p>
+                    </div>
+                </div>
+                </Router>
     </footer>
-    </BrowserRouter>
         );
     }
 }

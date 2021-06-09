@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Home from './Components/Home';
+import React, { Component } from 'react';
+import { render } from 'sass';
+import ReactDOM from 'react-dom'
+import Home  from './components/Home';
 
-function App() {
-    return(
-        <div className="container">
-            <Home></Home>
-        </div>
-    );
+class App extends Component {
+    render(){
+        return(
+            <div className="container">
+                <Home></Home>
+            </div>
+        );
+    }
 }
-
-export default App;
 
 if  (document.getElementById('root')) {
     ReactDOM.render(<App/>, document.getElementById('root'));

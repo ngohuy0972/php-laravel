@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import { Switch,Route,Link } from "react-router-dom";
 
 class Features extends Component{
 render(){
@@ -10,7 +9,7 @@ render(){
                     <div className="row">
                         <div className="col-lg-4">
                             <div className="single-features-ads first">
-                                <img src="frontend/img/icons/f-delivery.png" alt=""/>
+                                <img src="img/icons/f-delivery.png" alt=""/>
                                 <h4>Free shipping</h4>
                                 <p>Fusce urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vesti bulum mal
                                     esuada aliquet libero viverra cursus. </p>
@@ -18,7 +17,7 @@ render(){
                         </div>
                         <div className="col-lg-4">
                             <div className="single-features-ads second">
-                                <img src="frontend/img/icons/coin.png" alt=""/>
+                                <img src="img/icons/coin.png" alt=""/>
                                 <h4>100% Money back </h4>
                                 <p>Urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vesti bulum mal esuada
                                     aliquet libero viverra cursus. </p>
@@ -26,7 +25,7 @@ render(){
                         </div>
                         <div className="col-lg-4">
                             <div className="single-features-ads">
-                                <img src="frontend/img/icons/chat.png" alt=""/>
+                                <img src="img/icons/chat.png" alt=""/>
                                 <h4>Online support 24/7</h4>
                                 <p>Urna quam, euismod sit amet mollis quis, vestibulum quis velit. Vesti bulum mal esuada
                                     aliquet libero viverra cursus. </p>
@@ -43,7 +42,7 @@ render(){
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="single-box-item first-box">
-                                        <img src="frontend/img/f-box-1.jpg" alt=""/>
+                                        <img src="img/f-box-1.jpg" alt=""/>
                                         <div className="box-text">
                                             <span className="trend-year">2019 Party</span>
                                             <h2>Jewelry</h2>
@@ -54,7 +53,7 @@ render(){
                                 </div>
                                 <div className="col-lg-12">
                                     <div className="single-box-item second-box">
-                                        <img src="frontend/img/f-box-2.jpg" alt=""/>
+                                        <img src="img/f-box-2.jpg" alt=""/>
                                         <div className="box-text">
                                             <span className="trend-year">2019 Trend</span>
                                             <h2>Footwear</h2>
@@ -66,7 +65,7 @@ render(){
                         </div>
                         <div className="col-lg-6">
                             <div className="single-box-item large-box">
-                                <img src="frontend/img/f-box-3.jpg" alt=""/>
+                                <img src="img/f-box-3.jpg" alt=""/>
                                 <div className="box-text">
                                     <span className="trend-year">2019 Party</span>
                                     <h2>Collection</h2>

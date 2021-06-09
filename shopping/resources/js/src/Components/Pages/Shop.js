@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import Breadcrumb from '../Elements/Breadcrumb';
+import AllProducts from '../Elements/AllProducts';
 
 class Shop extends Component {
-    render(){
-        return(
-            <div className="register-container">
-                <p>This is Shop page</p>
-            </div>
+    render() {
+        return (
+          <div className="shop-container">
+            <Breadcrumb></Breadcrumb>
+            <AllProducts></AllProducts>
+          </div>
         );
     }
 }
