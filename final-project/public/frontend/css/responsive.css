@@ -1,0 +1,343 @@
+/* ---------------------------------- Responsive Media Styles ---------------------------------*/
+
+@media only screen and (min-width: 1500px) and (max-width: 1920px) {
+	.inner-header .user-access {
+		float: right;
+		line-height: 30px;
+	}
+	.inner-header .header-right {
+		float: right;
+	}
+	.inner-header .main-menu {
+		float: right;
+		margin-right: 13%;
+	}
+}
+
+@media only screen and (min-width: 1250px) and (max-width: 1499px) {
+	.inner-header .user-access {
+		float: right;
+	}
+	.inner-header .main-menu {
+		margin-right: 10%;
+	}
+}
+
+/* Medium Device : 1280px */
+
+@media only screen and (min-width: 992px) and (max-width: 1249px) {
+	.inner-header .main-menu {
+		margin-right: 10%;
+	}
+	.inner-header .main-menu ul li {
+		margin-left: 25px;
+	}
+	.inner-header .user-access {
+		float:right;
+		display: block;
+		margin-right: 20px;
+	}
+	.header-info .shipping-chrg {
+		margin-right: 10px;
+	}
+	.lookbok-left {
+		padding-top: 0px;
+	}
+	.lookbok-pic .pic-text {
+		font-size: 95px;
+		line-height: 68px;
+	}
+	.social-links a {
+		margin-right: 50px;
+	}
+	.product-content {
+		padding-top: 20px;
+	}
+	.product-content .p-info {
+		margin-top: 35px;
+	}
+	.cart-btn .site-btn.update-btn {
+		margin-right: 0;
+		padding: 16px 35px;
+	}
+	.header-info .shipping-chrg p {
+		font-size: 13px;
+	}
+	.logo-section {
+		padding: 70px 0;
+	}
+	.order-table .cart-item p.product-name {
+		font-size: 12px;
+		font-weight: 600;
+		padding-top: 3px;
+	}
+}
+
+/* Tablet Device : 768px */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.header-section {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.inner-header .main-menu {
+		margin-right: 11%;
+	}
+	.inner-header .main-menu ul li {
+		margin-left: 15px;
+	}
+	.inner-header .main-menu ul li a {
+		font-size: 14px;
+	}
+	.header-info .shipping-chrg {
+		float: none;
+		margin-right: 0;
+	}
+	.header-info .student-disc {
+		float: none;
+	}
+	.header-info .coupon-code {
+		float: none;
+	}
+	.inner-header .user-access {
+		display: block;
+		margin-right: 30px;
+	}
+	.page-add .page-breadcrumb {
+		margin-bottom: 20px;
+	}
+	.lookbok-left {
+		margin-bottom: 30px;
+	}
+	.checkout-form .in-name {
+		text-align: left;
+	}
+	.social-links a {
+		margin-right: 15px;
+	}
+	.social-links a i {
+		margin-right: 10px;
+	}
+	.cart-btn {
+		padding: 50px 30px;
+	}
+	.cart-btn .coupon-input {
+		padding-left: 0;
+		margin-bottom: 30px;
+	}
+	.cart-btn .coupon-input input {
+		width: 100%;
+	}
+	.shipping-info .cs-item {
+		margin-right: 15px;
+	}
+	.contact-form {
+		margin-bottom: 40px;
+	}
+	.logo-section {
+		padding: 70px 0;
+	}
+	.lookbok-left {
+		padding-top: 0;
+	}
+}
+
+/* Large Mobile : 480px */
+
+@media only screen and (max-width: 767px) {
+	.header-section {
+		height: auto;
+		padding-bottom: 0;
+	}
+    .inner-header .logo {
+        float: left;
+        margin-left: 40%;
+        width: 15%;
+    }
+	.inner-header {
+		overflow: hidden;
+	}
+	.inner-header .user-access {
+		margin-right: 10px;
+	}
+	.slicknav_menu {
+		display: block;
+        float: right;
+        margin-top: -45px;
+        margin-right: 88%;
+	}
+	.inner-header .header-right {
+		margin-right: 20px;
+		margin-top: -5px;
+	}
+	.slicknav_nav ul {
+		margin: 0 0 0 0;
+	}
+	.main-menu {
+		display: none;
+	}
+	.header-section {
+		overflow: hidden;
+	}
+	.single-slider-item h1 {
+		font-size: 72px;
+	}
+	.single-slider-item h2 {
+		font-size: 42px;
+	}
+	.lookbok-left {
+		margin-bottom: 30px;
+	}
+	.contact-form {
+		margin-bottom: 40px;
+	}
+	.newslatter-form form button {
+		position: relative;
+		margin-top: 15px;
+		width: 100%;
+	}
+	.header-info .shipping-chrg {
+		float: none;
+		margin-right: 0;
+	}
+	.header-info .student-disc {
+		float: none;
+	}
+	.header-info .coupon-code {
+		float: none;
+	}
+	.hero-items .owl-nav button[type=button] {
+		left: 5px;
+	}
+	.social-links {
+		text-align: center;
+	}
+	.social-links a {
+		margin-right: 20px;
+	}
+	.social-links a i {
+		margin-right: 0;
+	}
+	.social-links a span {
+		display: none;
+	}
+	.lookbok-pic .pic-text {
+		font-size: 115px;
+		line-height: 82px;
+	}
+	.page-add .page-breadcrumb {
+		margin-bottom: 20px;
+	}
+	.cart-table {
+		overflow-y: auto;
+	}
+	.cart-btn {
+		padding: 50px 30px;
+	}
+	.cart-btn .coupon-input {
+		padding-left: 0;
+		margin-bottom: 30px;
+	}
+	.cart-btn .coupon-input input {
+		width: 100%;
+	}
+	.shipping-info .cs-item {
+		margin-bottom: 15px;
+	}
+	.total-info .total-table {
+		overflow-y: auto;
+	}
+	.checkout-form .in-name {
+		text-align: left;
+	}
+	.logo-section {
+		padding: 70px 0;
+	}
+	.lookbok-left {
+		padding-top: 0;
+	}
+	.header-info .header-item {
+		margin-bottom: 7px;
+	}
+	.search-model-form input {
+		width: 100%;
+	}
+}
+
+/* Small : 320px */
+
+@media only screen and (max-width: 479px) {
+	.header-section {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.inner-header .header-right {
+		margin-right: 0;
+	}
+    .inner-header .logo {
+        float: left;
+        margin-left: 40%;
+        width: 15%;
+    }
+    .slicknav_menu {
+		display: block;
+        float: right;
+        margin-top: -40px;
+        margin-right: 84%;
+	}
+	.features-box .single-box-item.first-box .box-text {
+		right: 9px;
+		top: 7px;
+	}
+	.features-box .single-box-item .box-text h2 {
+		font-size: 40px;
+	}
+	.features-box .single-box-item.first-box .box-text .trend-alert {
+		margin-bottom: 7px;
+	}
+	.features-box .single-box-item.second-box .box-text {
+		left: 20px;
+		top: 56px;
+	}
+	.features-box .single-box-item.large-box .box-text {
+		left: 20px;
+		top: 28px;
+	}
+	.features-box .single-box-item.large-box .box-text h2 {
+		font-size: 40px;
+	}
+	.product-filter .product-controls li {
+		margin-bottom: 10px;
+	}
+	.section-title h2 {
+		font-size: 36px;
+	}
+	.lookbok-pic img {
+		height: auto;
+	}
+	.lookbok-pic .pic-text {
+		font-size: 65px;
+		line-height: 47px;
+	}
+	.social-links a {
+		margin-right: 10px;
+	}
+	.product-content .product-quantity {
+		margin-bottom: 15px;
+	}
+	.cart-btn .coupon-input input {
+		width: 100%;
+	}
+	.cart-btn .site-btn.update-btn {
+		margin-right: 0;
+	}
+	.cart-btn .site-btn.clear-btn {
+		margin-bottom: 15px;
+	}
+	.header-info .header-item img {
+		display: block;
+	}
+	.header-info {
+		padding: 10px 0;
+	}
+}

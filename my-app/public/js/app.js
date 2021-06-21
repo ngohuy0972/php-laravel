@@ -72454,8 +72454,8 @@ if (document.getElementById('react-app')) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\ngohu\OneDrive\Máy tính\laravel\reactjs-app\my-app\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\ngohu\OneDrive\Máy tính\laravel\reactjs-app\my-app\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/huybapp/php/reactjs-app/my-app/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/huybapp/php/reactjs-app/my-app/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

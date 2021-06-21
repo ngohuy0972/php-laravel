@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('frontend/css/slicknav.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}" type="text/css">
+    <link rel="stylesheet" href="{{asset('frontend/css/responsive.css')}}" type="text/css">
 </head>
 <body>
     <div id="app">
@@ -92,6 +93,7 @@
             @yield('product_detail')
             @yield('checkout')
             @yield('shopping_cart')
+            @yield('contact')
 
             {{-- Authentication --}}
             @yield('login')

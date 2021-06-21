@@ -23,7 +23,7 @@
             </div>
             <div class="header-right">
                 <img src="{{asset('frontend/img/icons/search.png')}}" alt="" class="search-trigger">
-                <a href="{{asset('/')}}" style="margin-right: 15px;">
+                <a href="{{asset('/register')}}" style="margin-right: 15px;">
                     <img src="{{asset('frontend/img/icons/man.png')}}" alt="">
                 </a>
                 <a href="{{asset('/shopping-cart')}}">
@@ -31,10 +31,10 @@
                     <span>2</span>
                 </a>
             </div>
-            <div class="user-access">
+            {{-- <div class="user-access">
                 <a href="{{asset('/register')}}">Register</a>
                 <a href="{{asset('/login')}}" class="in">Log in</a>
-            </div>
+            </div> --}}
             <nav class="main-menu mobile-menu">
                 <ul>
                     <li><a class="active" href="{{asset('/')}}">Home</a></li>
@@ -47,14 +47,14 @@
                     </li>
                     <li><a href="{{asset('/')}}">Blog</a></li>
                     <li><a href="{{asset('/')}}">About</a></li>
-                    <li><a href="{{asset('/')}}">Contact</a></li>
+                    <li><a href="{{asset('/contact')}}">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </div>
 </header>
 <!-- Header Info Begin -->
-<div class="header-info">
+{{-- <div class="header-info">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
@@ -77,6 +77,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Header Info End -->
 <!-- Header End -->

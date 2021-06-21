@@ -26,3 +26,4 @@ Route::resource('/shop', 'ProductController');
 Route::resource('/product-detail', 'ProductDetailController');
 Route::resource('/checkout', 'CheckoutController');
 Route::resource('/shopping-cart', 'ShoppingCartController');
+Route::resource('/contact', 'ContactController');
