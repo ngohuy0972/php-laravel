@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Products;
 
 class ShoesController extends Controller
 {
@@ -14,7 +15,8 @@ class ShoesController extends Controller
     public function index()
     {
         //
-        return view('pages.products.shoes');
+        $shoes = Products::all();
+        return view('pages.products.shoes')->with('shoes', $shoes);
     }
 
     /**
@@ -36,6 +38,12 @@ class ShoesController extends Controller
     public function store(Request $request)
     {
         //
+        $shoes = new Products();
+
+        $shoes =  Products::all()->where('categories', '=', 'Shoes');
+        $shoes->save();
+
+        return redirect()->route('shoes.index');
     }
 
     /**

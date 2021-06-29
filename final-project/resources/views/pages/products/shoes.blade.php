@@ -41,118 +41,22 @@
         <div class="row">   
             <div class="col-lg-12 col-md-12">
                 <div class="row">
+                    @foreach ($shoes as $item)
+                        
+                    @endforeach
                     <div class="col-lg-3 col-md-3">
                         <div class="single-product-item">
                             <figure>
                                 <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
-                                <div class="p-status sale">sale</div>
                             </figure>
                             <div class="product-text">
-                                <a href="{{asset('/product-detail')}}">
-                                    <h6>Yellow Maxi Dress</h6>
+                                <a href="{{asset('/storage/'.$item -> image )}}">
+                                    <h6>{{ $item->name_product}}</h6>
                                 </a>
-                                <p>$25.90</p>
+                                <p>{{ $item->price }}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-product-item">
-                            <figure>
-                                <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
-                                <div class="p-status sale">sale</div>
-                            </figure>
-                            <div class="product-text">
-                                <a href="{{asset('/product-detail')}}">
-                                    <h6>Yellow Maxi Dress</h6>
-                                </a>
-                                <p>$25.90</p>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-product-item">
-                            <figure>
-                                <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
-                                <div class="p-status sale">sale</div>
-                            </figure>
-                            <div class="product-text">
-                                <a href="{{asset('/product-detail')}}">
-                                    <h6>Yellow Maxi Dress</h6>
-                                </a>
-                                <p>$25.90</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-product-item">
-                            <figure>
-                                <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
-                                <div class="p-status sale">sale</div>
-                            </figure>
-                            <div class="product-text">
-                                <a href="{{asset('/product-detail')}}">
-                                    <h6>Yellow Maxi Dress</h6>
-                                </a>
-                                <p>$25.90</p>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-product-item">
-                            <figure>
-                                <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
-                                <div class="p-status sale">sale</div>
-                            </figure>
-                            <div class="product-text">
-                                <a href="{{asset('/product-detail')}}">
-                                    <h6>Yellow Maxi Dress</h6>
-                                </a>
-                                <p>$25.90</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-product-item">
-                            <figure>
-                                <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
-                                <div class="p-status sale">sale</div>
-                            </figure>
-                            <div class="product-text">
-                                <a href="{{asset('/product-detail')}}">
-                                    <h6>Yellow Maxi Dress</h6>
-                                </a>
-                                <p>$25.90</p>
-                            </div>
-                        </div>
-                    </div> 
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-product-item">
-                            <figure>
-                                <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
-                                <div class="p-status sale">sale</div>
-                            </figure>
-                            <div class="product-text">
-                                <a href="{{asset('/product-detail')}}">
-                                    <h6>Yellow Maxi Dress</h6>
-                                </a>
-                                <p>$25.90</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-3">
-                        <div class="single-product-item">
-                            <figure>
-                                <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
-                                <div class="p-status sale">sale</div>
-                            </figure>
-                            <div class="product-text">
-                                <a href="{{asset('/product-detail')}}">
-                                    <h6>Yellow Maxi Dress</h6>
-                                </a>
-                                <p>$25.90</p>
-                            </div>
-                        </div>
-                    </div> 
                 </div>
             </div>
         </div>
