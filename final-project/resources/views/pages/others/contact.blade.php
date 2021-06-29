@@ -1,8 +1,15 @@
 @extends('layouts.app')
 
 @section('contact')
+{{-- <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{asset('/home_page')}}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+    </nav> --}}
+<section class="cart-total-page spad">
   <div class="container">
-    <section class="page-add">
+    {{-- <section class="page-add">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -17,8 +24,12 @@
                 </div>
             </div>
         </div>
-      </section> 
+    </section>  --}}
     <div class="row">
+        <div class="col-lg-12" style="margin-bottom: 70px;
+        border-bottom: 2px solid #D0D7DB;">
+            <h3 style="margin-bottom:15px;">Liên hệ với chúng tôi</h3>
+        </div>
         <div class="col-lg-8">
             <form action="#" class="contact-form">
                 <div class="row">
@@ -30,11 +41,11 @@
                     </div>
                     <div class="col-lg-12">
                         <input type="email" placeholder="E-mail">
-                        <input type="text" placeholder="Subject">
-                        <textarea placeholder="Message"></textarea>
+                        <input type="text" placeholder="Nội dung">
+                        <textarea placeholder="Lời nhắn"></textarea>
                     </div>
-                    <div class="col-lg-12 text-right">
-                        <button type="submit">Send message</button>
+                    <div class="col-lg-12 text-right payment-method">
+                        <button type="submit">Gửi tin nhắn</button>
                     </div>
                 </div>
             </form>
@@ -71,4 +82,5 @@
         </div>
     </div>
 </div>
+</section>
 @endsection

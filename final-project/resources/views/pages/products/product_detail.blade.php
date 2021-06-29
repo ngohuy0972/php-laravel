@@ -2,7 +2,13 @@
 
 @section('product_detail')
     <!-- Page Add Section Begin -->
-    <section class="page-add">
+    {{-- <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{asset('/home_page')}}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Product Detail</li>
+        </ol>
+    </nav> --}}
+    {{-- <section class="page-add">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -15,12 +21,16 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- Page Add Section End -->
 
     <!-- Product Page Section Beign -->
     <section class="product-page">
         <div class="container">
+            <div class="col-lg-12" style="margin-bottom: 70px;
+            border-bottom: 2px solid #D0D7DB;">
+                <h3 style="margin-bottom:15px;">Chi tiết sản phẩm</h3>
+            </div>
             <div class="product-control">
                 <a href="#">Previous</a>
                 <a href="#">Next</a>

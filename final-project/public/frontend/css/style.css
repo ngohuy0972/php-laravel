@@ -273,7 +273,9 @@ ol {
 
 .inner-header .header-right {
 	float: right;
-	line-height: 30px;
+    margin-top: -7px;
+	margin-right: 20px;
+    line-height: 50px;
 }
 
 .inner-header .header-right img {
@@ -1761,9 +1763,9 @@ ol {
 	color: #1e1e1e;
 	font-size: 14px;
 	font-weight: 600;
-	text-align: right;
+	text-align: left;
 	margin: 0;
-	margin-top: 18px;
+	margin-top: 10px;
 }
 
 .checkout-form input[type=text] {
@@ -1776,6 +1778,27 @@ ol {
 	font-weight: 500;
 	margin-bottom: 32px;
 }
+.checkout-form input[type=email] {
+	width: 100%;
+	border: 0;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #E7EBED;
+	color: #838383;
+	font-size: 12px;
+	font-weight: 500;
+	margin-bottom: 32px;
+}
+.checkout-form input[type=password] {
+	width: 100%;
+	border: 0;
+	padding-bottom: 12px;
+	border-bottom: 2px solid #E7EBED;
+	color: #838383;
+	font-size: 12px;
+	font-weight: 500;
+	margin-bottom: 32px;
+}
+
 
 .checkout-form .cart-select {
 	margin-bottom: 35px;
@@ -1911,7 +1934,7 @@ ol {
 	margin: 0;
 }
 
-.payment-method {
+.payment-method, .btn-register-login {
 	padding-top: 22px;
 }
 
@@ -1961,9 +1984,21 @@ ol {
 	visibility: hidden;
 }
 
-.payment-method button {
+.payment-method button, .btn-register-login button {
 	color: #1e1e1e;
 	background: transparent;
+	border: none;
+	font-weight: 600;
+	width: 100%;
+	padding: 16px;
+	border: 2px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.payment-method button:hover, .btn-register-login:hover button {
+	color: #ffffff;
+	background: #000;
 	border: none;
 	font-weight: 600;
 	width: 100%;
@@ -2045,3 +2080,67 @@ ol {
 .map iframe {
 	width: 100%;
 }
+
+/* Dropdown Button */
+.dropbtn {
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+	display: none;
+	position: absolute;
+	margin-left: -20px;
+	background-color:#fff;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+
+  .dropdown-content li {
+	list-style-type: none;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+	color: black;
+	text-decoration: none;
+	display: block;
+	margin-right: 0;
+	padding: 0px 20px;
+	font-size: 14px;
+	line-height: 2.3;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+	background-color: rgb(255, 255, 255);
+	}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+	display: block;
+	visibility: visible;
+	opacity:1;
+	transform: translateY(0px);
+	transition:.5s ease all;
+	}
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+	  background-color: #3e8e4100;
+	}
+	#categories {
+		border: none;
+		padding: 10px;
+		margin-top: 0px;
+		background: #fff;
+	}

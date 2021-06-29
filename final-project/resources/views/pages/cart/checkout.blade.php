@@ -2,17 +2,12 @@
 
 @section('checkout')
     <!-- Page Add Section Begin -->
-    <section class="page-add">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="page-breadcrumb">
-                        <h2>Checkout<span>.</span></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {{-- <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{asset('/home_page')}}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Check Out</li>
+        </ol>
+    </nav> --}}
     <!-- Page Add Section End -->
 
     <!-- Cart Total Page Begin -->
@@ -21,12 +16,12 @@
             <form action="#" class="checkout-form">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3>Your Information</h3>
+                        <h3>Thông tin của bạn</h3>
                     </div>
                     <div class="col-lg-9">
                         <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">Name*</p>
+                                <p class="in-name">Họ Và Tên*</p>
                             </div>
                             <div class="col-lg-5">
                                 <input type="text" placeholder="First Name">
@@ -37,7 +32,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">Street Address*</p>
+                                <p class="in-name">Địa chỉ*</p>
                             </div>
                             <div class="col-lg-10">
                                 <input type="text">
@@ -46,25 +41,7 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">Country*</p>
-                            </div>
-                            <div class="col-lg-10">
-                                <select class="cart-select country-usa">
-                                    <option>USA</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-2">
-                                <p class="in-name">City*</p>
-                            </div>
-                            <div class="col-lg-10">
-                                <input type="text">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-2">
-                                <p class="in-name">Country</p>
+                                <p class="in-name">Thành phố*</p>
                             </div>
                             <div class="col-lg-10">
                                 <input type="text">
@@ -80,51 +57,43 @@
                         </div>
                         <div class="row">
                             <div class="col-lg-2">
-                                <p class="in-name">Phone*</p>
+                                <p class="in-name">Số điện thoại*</p>
                             </div>
                             <div class="col-lg-10">
                                 <input type="text">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 text-right">
-                                <div class="diff-addr">
-                                    <input type="radio" id="one">
-                                    <label for="one">Ship to different address</label>
-                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="order-table">
                             <div class="cart-item">
-                                <span>Product</span>
-                                <p class="product-name">Blue Dotted Shirt</p>
+                                <span>Sản phẩm</span>
+                                <p class="product-name">Áo Thun</p>
                             </div>
                             <div class="cart-item">
-                                <span>Price</span>
+                                <span>Giá bán</span>
                                 <p>$29</p>
                             </div>
                             <div class="cart-item">
-                                <span>Quantity</span>
+                                <span>Số lượng</span>
                                 <p>1</p>
                             </div>
                             <div class="cart-item">
-                                <span>Shipping</span>
+                                <span>Phí vận chuyển</span>
                                 <p>$10</p>
                             </div>
 
                             <div class="cart-total">
-                                <span>Total</span>
+                                <span>Tổng thanh toán</span>
                                 <p>$39</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-10">
                         <div class="payment-method">
-                            <h3>Payment</h3>
+                            <h3>Phương thức thanh toán</h3>
                             <ul>
                                 <li>Paypal <img src="{{asset('frontend/img/paypal.jpg')}}" alt=""></li>
                                 <li>Credit / Debit card <img src="{{asset('frontend/img/mastercard.jpg')}}" alt=""></li>
@@ -133,7 +102,7 @@
                                     <input type="radio" id="two">
                                 </li>
                             </ul>
-                            <button type="submit">Place your order</button>
+                            <button type="submit">Đặt hàng</button>
                         </div>
                     </div>
                 </div>

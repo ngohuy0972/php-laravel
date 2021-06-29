@@ -94,6 +94,13 @@
             @yield('checkout')
             @yield('shopping_cart')
             @yield('contact')
+            @yield('clothes')
+            @yield('shoes')
+            @yield('accessories')
+
+            {{-- Admin --}}
+            @yield('create_product')
+            @yield('manage_product')
 
             {{-- Authentication --}}
             @yield('login')

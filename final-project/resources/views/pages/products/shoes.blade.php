@@ -1,11 +1,21 @@
 @extends('layouts.app')
 
-@section('all_products')
+@section('shoes')
     <!-- Categories Page Section Begin -->
+    {{-- <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="{{asset('/home_page')}}">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Shoes</li>
+        </ol>
+    </nav> --}}
 <section class="categories-page spad">
     <div class="container">
         <div class="categories-controls">
             <div class="row">
+                <div class="col-lg-12" style="margin-bottom: 70px;
+                border-bottom: 2px solid #D0D7DB;">
+                    <h3 style="margin-bottom:15px;">Giày dép</h3>
+                </div>
                 <div class="col-lg-12">
                     <div class="categories-filter">
                         <div class="cf-left">
@@ -149,7 +159,7 @@
         <div class="more-product">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <a href="#" class="primary-btn">Load More</a>
+                    <a href="#" class="primary-btn">Xem thêm</a>
                 </div>
             </div>
         </div>

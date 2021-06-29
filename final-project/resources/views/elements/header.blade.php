@@ -23,9 +23,42 @@
             </div>
             <div class="header-right">
                 <img src="{{asset('frontend/img/icons/search.png')}}" alt="" class="search-trigger">
-                <a href="{{asset('/register')}}" style="margin-right: 15px;">
+                {{-- <a href="{{asset('/register')}}" style="margin-right: 15px;">
                     <img src="{{asset('frontend/img/icons/man.png')}}" alt="">
-                </a>
+                </a> --}}
+                <div class="dropdown">
+                    <img class="dropbtn" src="{{asset('frontend/img/icons/man.png')}}" alt="">
+                    <div class="dropdown-content">
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">Đăng nhập</a>
+                            </li>
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">Đăng ký</a>
+                            </li>
+                        @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }}
+                                </a>
+        
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
+                                                        document.getElementById('logout-form').submit();">
+                                        Đăng xuất
+                                    </a>
+        
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    </div>
+                </div>
                 <a href="{{asset('/shopping-cart')}}">
                     <img src="{{asset('frontend/img/icons/bag.png')}}" alt="">
                     <span>2</span>
@@ -37,17 +70,17 @@
             </div> --}}
             <nav class="main-menu mobile-menu">
                 <ul>
-                    <li><a class="active" href="{{asset('/')}}">Home</a></li>
-                    <li><a href="{{asset('/shop')}}">Shop</a>
+                    <li><a class="active" href="{{asset('/')}}">Trang chủ</a></li>
+                    <li><a href="{{asset('/shop')}}">Cửa hàng</a>
                         <ul class="sub-menu">
-                            <li><a href="{{asset('/')}}">Clothes</a></li>
-                            <li><a href="{{asset('/')}}">Shoes</a></li>
-                            <li><a href="{{asset('/')}}">Accesories</a></li>
+                            <li><a href="{{asset('/clothes')}}">Quần áo</a></li>
+                            <li><a href="{{asset('/shoes')}}">Giày dép</a></li>
+                            <li><a href="{{asset('/accessories')}}">Phụ kiện</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{asset('/')}}">Blog</a></li>
-                    <li><a href="{{asset('/')}}">About</a></li>
-                    <li><a href="{{asset('/contact')}}">Contact</a></li>
+                    <li><a href="{{asset('/')}}">Bài viết</a></li>
+                    <li><a href="{{asset('/')}}">Về chúng tôi</a></li>
+                    <li><a href="{{asset('/contact')}}">Liên hệ</a></li>
                 </ul>
             </nav>
         </div>

@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Products;
 
-class ProductController extends Controller
+class ClothesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = Products::All();
-        return view('pages.products.manage_product')->with('products', $products);
+        return view('pages.products.clothes');
     }
 
     /**
@@ -27,7 +25,6 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('pages.products.create_product');
     }
 
     /**
@@ -39,18 +36,6 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        $products = new Products();
-        $products->idSP = $request->idSP;
-        $products->name_product = $request->name_product;
-        $products->quantity = $request->quantity;
-        $products->categories = $request->categories;
-        // Chay cau lenh php artisan storage:link de tao storage luu tru file.
-        $products->image = $request->file('image')->store('/uploads/image', 'public');
-        $products->price = $request->price;
-
-        $products->save();
-
-        return redirect()->route('product.index')->with('Them san pham thanh cong');
     }
 
     /**
