@@ -15,7 +15,7 @@
                         <th>Danh muc</th>
                         <th>Hinh anh</th>
                         <th>Gia ban</th>
-                        <th>Chinh sua</th>
+                        <th>Lua chon</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,13 +28,13 @@
                         <td>{{ $product->categories }}</td>
                         <td><img src="{{asset('/storage/'.$product -> image)}}" alt="product-image"></td>
                         <td>{{ $product->price }}</td>
-                        <td><button type="button" class="btn btn-primary"><a href="#">Edit</a></button>
-                             | <button type="button" class="btn btn-primary"><a href="#">Delete</a></button></td>
+                        <td><button type="button" class="btn btn-success"><a href="{{ route('product.edit', $product->id)}}">Edit</a></button>
+                             | <button type="button" class="btn btn-danger"><a href="{{ route('product.destroy', $product->id)}}">Delete</a></button></td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-            <button type="button" class="btn btn-primary"><a href="{{asset('/product/create')}}">Create new Product</a></button>
+            <button type="button" class="btn btn-success"><a href="{{asset('/product/create')}}">Create new Product</a></button>
         </div>
     </div>
 </section>

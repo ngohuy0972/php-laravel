@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Products;
+use App\Models\Product;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -15,7 +16,7 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = Products::All();
+        $products = Product::All();
         return view('pages.products.manage_product')->with('products', $products);
     }
 
@@ -39,7 +40,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        $products = new Products();
+        $products = new Product();
         $products->idSP = $request->idSP;
         $products->name_product = $request->name_product;
         $products->quantity = $request->quantity;
@@ -73,6 +74,9 @@ class ProductController extends Controller
     public function edit($id)
     {
         //
+        $products = Product::where('id', '=', $id)->get();
+        // var_dump($products);
+        return view('pages.products.edit_product', compact('products'));
     }
 
     /**

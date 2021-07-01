@@ -22,6 +22,8 @@ Auth::routes();
 Route::get('/home_page', 'HomeController@index')->name('/home_page');
 
 // Products
+Route::resource('/product', 'ProductController');
+Route::resource('/shop', 'ShopController');
 Route::resource('/product-detail', 'ProductDetailController');
 Route::resource('/checkout', 'CheckoutController');
 Route::resource('/shopping-cart', 'ShoppingCartController');
@@ -29,5 +31,3 @@ Route::resource('/contact', 'ContactController');
 Route::resource('/clothes', 'ClothesController');
 Route::resource('/shoes', 'ShoesController');
 Route::resource('/accessories', 'AccessoriesController');
-Route::resource('/shop', 'ShopController');
-Route::resource('/product', 'ProductController');

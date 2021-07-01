@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('all_products')
+@section('shop')
     <!-- Categories Page Section Begin -->
     {{-- <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
         <ol class="breadcrumb">
@@ -41,18 +41,18 @@
         <div class="row">   
             <div class="col-lg-12 col-md-12">
                 <div class="row">
-                    @foreach ($items as $product)
+                    @foreach ($items as $product_field)
                     <div class="col-lg-3 col-md-3">
                         <div class="single-product-item">
                             <figure>
-                                <img src="{{asset('/storage/'.$product -> image)}}" alt="product-image">
+                                <img src="{{asset('/storage/'.$product_field -> image)}}" alt="product-image">
                                 {{-- <div class="p-status sale">sale</div> --}}
                             </figure>
                             <div class="product-text">
                                 <a href="{{asset('/product-detail')}}">
-                                    <h6>{{$product -> name_product}}</h6>
+                                    <h6>{{$product_field -> name_product}}</h6>
                                 </a>
-                                <p>{{ $product -> price }}</p>
+                                <p>{{ $product_field -> price }}</p>
                             </div>
                         </div>
                     </div>

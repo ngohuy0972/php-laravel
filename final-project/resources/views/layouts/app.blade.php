@@ -89,7 +89,7 @@
         <main class="py-4">
             {{-- Pages --}}
             @yield('home_page')
-            @yield('all_products')
+            @yield('shop')
             @yield('product_detail')
             @yield('checkout')
             @yield('shopping_cart')
@@ -101,6 +101,7 @@
             {{-- Admin --}}
             @yield('create_product')
             @yield('manage_product')
+            @yield('edit_product')
 
             {{-- Authentication --}}
             @yield('login')
