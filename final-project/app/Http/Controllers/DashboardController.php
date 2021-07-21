@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
-use Illuminate\Support\Facades\DB;
 
-class ProductController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,7 @@ class ProductController extends Controller
     public function index()
     {
         //
-        $products = Product::All();
-        return view('pages.products.manage_product')->with('products', $products);
+        return view('dashboard');
     }
 
     /**
@@ -28,7 +25,6 @@ class ProductController extends Controller
     public function create()
     {
         //
-        return view('pages.products.create_product');
     }
 
     /**
@@ -40,18 +36,6 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         //
-        $products = new Product();
-        $products->idSP = $request->idSP;
-        $products->name_product = $request->name_product;
-        $products->quantity = $request->quantity;
-        $products->categories = $request->categories;
-        // Chay cau lenh php artisan storage:link de tao storage luu tru file.
-        $products->image = $request->file('image')->store('/uploads/image', 'public');
-        $products->price = $request->price;
-
-        $products->save();
-
-        return redirect()->route('product.index')->with('Them san pham thanh cong');
     }
 
     /**
@@ -74,9 +58,6 @@ class ProductController extends Controller
     public function edit($id)
     {
         //
-        $products = Product::where('id', '=', $id)->get();
-        // var_dump($products);
-        return view('pages.products.edit_product', compact('products'));
     }
 
     /**
@@ -100,10 +81,5 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
-        $products = Product::where('id', '=', $id)->get();
-        $products->delete();
-
-        // return redirect()->route('product.index')->with('delete', 'Delete Data Successfully');
-        return view('pages.products.edit_product', compact('products'));
     }
 }

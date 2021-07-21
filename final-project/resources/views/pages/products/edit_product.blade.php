@@ -59,11 +59,12 @@
                             <p class="in-name">Danh mục</p>
                         </div>
                         <div class="col-lg-10">
-                            <select id="categories" name="categories">
-                                <option value="clothes">Clothes</option>
-                                <option value="shoes">Shoes</option>
-                                <option value="accessories">Accessories</option>
-                              </select>
+                            {{-- <input type="text" class="form-control" id="categories" value="{{$old_value->categories}}"> --}}
+                            <select id="categories" name="categories"> 
+                                <option value="clothes" {{$old_value->categories == "clothes" ? 'selected' : ''}}>clothes</option>
+                                <option value="shoes" {{$old_value->categories == "shoes" ? 'selected' : ''}}>shoes</option>
+                                <option value="accessories" {{$old_value->categories == "accessories" ? 'selected' : ''}}>accessories</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
@@ -71,7 +72,8 @@
                             <p class="in-name">Hình ảnh</p>
                         </div>
                         <div class="col-lg-10">
-                            <input id="image" type="file" class="form-control" name="image" value="{{ $old_value->image }}">
+                            <input id="image" type="file" class="form-control" name="image">
+                            <img src="{{asset('/storage/'.$old_value -> image)}}" alt="product-image">
                             @error('image')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -80,7 +82,7 @@
                         </div>
                     </div>
                     <div class="row" style="margin-top: 10px;">
-                        <div class="col-lg-2">
+                        <div class="col-lg-2">   
                             <p class="in-name">Giá bán</p>
                         </div>
                         <div class="col-lg-10">

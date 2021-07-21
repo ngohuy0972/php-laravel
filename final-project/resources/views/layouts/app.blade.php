@@ -99,6 +99,7 @@
             @yield('accessories')
 
             {{-- Admin --}}
+            @yield('dashboard')
             @yield('create_product')
             @yield('manage_product')
             @yield('edit_product')

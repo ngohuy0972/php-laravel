@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home_page', 'HomeController@index')->name('/home_page');
+Route::resource('/dashboard', 'DashboardController');
 
 // Products
 Route::resource('/product', 'ProductController');
