@@ -4,7 +4,10 @@
 <section class="cart-total-page spad">
     <div class="container">
         <div class="col-lg-12">
-            
+            <div>
+                <button type="button" class="btn btn-success"><a href="{{asset('/product/create')}}">Create new Product</a></button>
+                <button type="button" class="btn btn-success"><a href="{{asset('/dashboard')}}">Dashboard</a></button>
+            </div>
             <table class="table">
                 <thead>
                     <tr>
@@ -34,7 +37,6 @@
                     @endforeach
                 </tbody>
             </table>
-            <button type="button" class="btn btn-success"><a href="{{asset('/product/create')}}">Create new Product</a></button>
         </div>
     </div>
 </section>

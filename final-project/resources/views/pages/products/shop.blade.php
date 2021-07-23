@@ -29,10 +29,7 @@
                             </form>
                         </div>
                         <div class="cf-right">
-                            <span>20 Products</span>
-                            <a href="#">2</a>
-                            <a href="#" class="active">4</a>
-                            <a href="#">6</a>
+                            <div class="active"> {{ $items->links()}}</div>
                         </div>
                     </div>
                 </div>

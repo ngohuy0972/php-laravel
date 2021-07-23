@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class AccessoriesController extends Controller
 {
@@ -14,7 +15,8 @@ class AccessoriesController extends Controller
     public function index()
     {
         //
-        return view('pages.products.accessories');
+        $accessories = Product::where('categories', 'accessories')->paginate(12);
+        return view('pages.products.accessories')->with('accessories', $accessories);
     }
 
     /**

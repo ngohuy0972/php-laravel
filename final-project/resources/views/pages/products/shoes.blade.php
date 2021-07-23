@@ -29,10 +29,7 @@
                             </form>
                         </div>
                         <div class="cf-right">
-                            <span>20 Products</span>
-                            <a href="#">2</a>
-                            <a href="#" class="active">4</a>
-                            <a href="#">6</a>
+                            <div class="active"> {{ $shoes->links()}}</div>
                         </div>
                     </div>
                 </div>
@@ -42,21 +39,20 @@
             <div class="col-lg-12 col-md-12">
                 <div class="row">
                     @foreach ($shoes as $item)
-                        
-                    @endforeach
                     <div class="col-lg-3 col-md-3">
                         <div class="single-product-item">
                             <figure>
                                 <img src="{{asset('frontend/img/products/img-2.jpg')}}" alt="">
                             </figure>
                             <div class="product-text">
-                                <a href="{{asset('/storage/'.$item -> image )}}">
+                                <a href="{{asset('/storage/'.$item->image)}}">
                                     <h6>{{ $item->name_product}}</h6>
                                 </a>
                                 <p>{{ $item->price }}</p>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </div>

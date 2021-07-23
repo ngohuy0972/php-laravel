@@ -15,7 +15,7 @@ class ShoesController extends Controller
     public function index()
     {
         //
-        $shoes = Product::all();
+        $shoes =  Product::where('categories', 'shoes')->paginate(12);
         return view('pages.products.shoes')->with('shoes', $shoes);
     }
 
@@ -38,12 +38,6 @@ class ShoesController extends Controller
     public function store(Request $request)
     {
         //
-        $shoes = new Products();
-
-        $shoes =  Products::all()->where('categories', '=', 'Shoes');
-        $shoes->save();
-
-        return redirect()->route('shoes.index');
     }
 
     /**
