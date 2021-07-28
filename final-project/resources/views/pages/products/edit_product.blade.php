@@ -3,22 +3,22 @@
 @section('edit_product')
 <section class="cart-total-page spad">
     <div class="container">
-        
-        <form method="GET" action="{{ route('product.index') }}" class="checkout-form" enctype="multipart/form-data">
+        @foreach ($products as $old_value)
+        <form method="POST" action="{{ route('product.update',$old_value->id) }}" class="checkout-form" enctype="multipart/form-data">
             @csrf
+            @method('PUT')
             <div class="row">
                 <div class="col-lg-12">
-                    <h3>Tạo Sản Phẩm</h3>
+                    <h3>Chỉnh Sửa Sản Phẩm</h3>
                 </div>
                 <div class="col-lg-1"></div>
                 <div class="col-lg-8">
-                    @foreach ($products as $old_value)
+                    
                     <div class="row">
                         <div class="col-lg-2">
                             <p class="in-name">Mã sản phẩm</p>
                         </div>
-                        <div class="col-lg-10">   
-                            {{-- @foreach ($products as $old_value)                       --}}
+                        <div class="col-lg-10">
                             <input id="idSP" type="text" class="form-control" name="idSP" value="{{ $old_value->idSP }}" >
                             @error('idSP')
                                 <span class="invalid-feedback" role="alert">
@@ -94,15 +94,15 @@
                             @enderror
                         </div>
                     </div>
-                    @endforeach
                     <div class="row">
                         <div class="col-lg-2"></div>
                         <div class="col-lg-10">
                             <div class="btn-register-login">
-                                <button type="submit">Update</button>
+                                <button type="submit" onclick="return confirm('Update?')">Update</button>
                             </div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
             </div>
         </form>

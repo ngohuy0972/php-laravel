@@ -38,18 +38,18 @@
         <div class="row">   
             <div class="col-lg-12 col-md-12">
                 <div class="row">
-                    @foreach ($items as $product_field)
+                    @foreach ($items as $item)
                     <div class="col-lg-3 col-md-3">
                         <div class="single-product-item">
                             <figure>
-                                <img src="{{asset('/storage/'.$product_field -> image)}}" alt="product-image">
+                                <img src="{{asset('/storage/'.$item->image)}}" alt="product-image">
                                 {{-- <div class="p-status sale">sale</div> --}}
                             </figure>
                             <div class="product-text">
                                 <a href="{{asset('/product-detail')}}">
-                                    <h6>{{$product_field -> name_product}}</h6>
+                                    <h6>{{$item->name_product}}</h6>
                                 </a>
-                                <p>{{ $product_field -> price }}</p>
+                                <p>{{ $item->price }}</p>
                             </div>
                         </div>
                     </div>
@@ -57,13 +57,13 @@
                 </div>
             </div>
         </div>
-        <div class="more-product">
+        {{-- <div class="more-product">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <a href="#" class="primary-btn">Xem thêm</a>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </section>
 @endsection

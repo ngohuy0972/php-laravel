@@ -88,7 +88,68 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // 
+
+        // $products = Product::find($id);
+
+        // if($products->image == null){
+        //     $products->idSP = $request->idSP;
+        //     $products->name_product = $request->name_product;
+        //     $products->quantity = $request->quantity;
+        //     $products->categories = $request->categories;
+        //     // Chay cau lenh php artisan storage:link de tao storage luu tru file.
+        //     $products->image = $request->file('image')->store('/uploads/image', 'public');
+        //     $products->price = $request->price;
+        // } else {
+        //     $products->idSP = $request->idSP;
+        //     $products->name_product = $request->name_product;
+        //     $products->quantity = $request->quantity;
+        //     $products->categories = $request->categories;
+        //     // Chay cau lenh php artisan storage:link de tao storage luu tru file.
+        //     $products->image = $request->file('image')->store('/uploads/image', 'public');
+        //     $products->price = $request->price;
+        // }
+        
+        // $products->save();
+        
+        // return redirect()->route('product.index')->with('update','Cap nhat san pham thanh cong');
+
+        $products = Product::find($id);
+        $image = request('image');
+
+        if ($products->image == null) {
+            $imagePath = request('image')->store('/uploads/image', 'public');
+            $products->idSP = $request->idSP;
+            $products->name_product = $request->name_product;
+            $products->quantity = $request->quantity;
+            $products->categories = $request->categories;
+            $products->image = $imagePath;
+            $products->price = $request->price;
+        } else {
+            if ($image) {
+                $detinationPath = '/uploads/image' . $products->image;
+                if (file_exists($detinationPath)) {
+                    unlink($detinationPath);
+                }
+                $imagePath = request('image')->store('/uploads/image', 'public');
+                $products->idSP = $request->idSP;
+                $products->name_product = $request->name_product;
+                $products->quantity = $request->quantity;
+                $products->categories = $request->categories;
+                $products->image = $imagePath;
+                $products->price = $request->price;
+            } else {
+                $products->idSP = $request->idSP;
+                $products->name_product = $request->name_product;
+                $products->quantity = $request->quantity;
+                $products->categories = $request->categories;
+                $products->price = $request->price;
+            }
+            $products->save();
+        }
+        $products->save();
+
+        return redirect()->route('product.index')->with('update', 'Update Data Successfully');
     }
 
     /**
@@ -100,10 +161,13 @@ class ProductController extends Controller
     public function destroy($id)
     {
         //
-        $products = Product::where('id', '=', $id)->get();
+        $products = Product::find($id);
+        // $detinationPath = 'storage/' . $products->image;
+        // if (file_exists($detinationPath)) {
+        //     unlink($detinationPath);
+        // }
         $products->delete();
 
-        // return redirect()->route('product.index')->with('delete', 'Delete Data Successfully');
-        return view('pages.products.edit_product', compact('products'));
+        return redirect()->route('product.index')->with('delete', 'Delete Data Successfully');
     }
 }

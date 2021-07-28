@@ -32,7 +32,14 @@
                         <td><img src="{{asset('/storage/'.$product -> image)}}" alt="product-image"></td>
                         <td>{{ $product->price }}</td>
                         <td><button type="button" class="btn btn-success"><a href="{{ route('product.edit', $product->id)}}">Edit</a></button>
-                             | <button type="button" class="btn btn-danger"><a href="{{ route('product.destroy', $product->id)}}">Delete</a></button></td>
+                             | <form action="{{ route('product.destroy', $product->id) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
+                                <button class="btn btn-danger" onclick="return confirm('Are you sure?')">
+                                    <i class="fas fa-trash"></i>Delete
+                                </button>
+                            </form>   
+                            </td>
                     </tr>
                     @endforeach
                 </tbody>

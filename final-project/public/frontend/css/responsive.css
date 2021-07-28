@@ -161,7 +161,7 @@
 		margin-right: 10px;
 	}
 	.slicknav_menu {
-		display: block;
+		display: none;
         float: right;
         margin-top: -45px;
         margin-right: 88%;
@@ -174,7 +174,7 @@
 		margin: 0 0 0 0;
 	}
 	.main-menu {
-		display: none;
+		display: block;
 	}
 	.header-section {
 		overflow: hidden;
@@ -280,7 +280,7 @@
         width: 15%;
     }
     .slicknav_menu {
-		display: block;
+		display: none;
         float: right;
         margin-top: -40px;
         margin-right: 84%;

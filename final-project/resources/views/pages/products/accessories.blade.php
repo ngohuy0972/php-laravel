@@ -57,13 +57,13 @@
                 </div>
             </div>
         </div>
-        <div class="more-product">
+        {{-- <div class="more-product">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <a href="#" class="primary-btn">Xem thêm</a>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </div>
 </section>
 @endsection
