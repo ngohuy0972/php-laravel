@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Shopping</title>
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
@@ -35,5 +35,6 @@
         <script src="{{asset('frontend/js/jquery.nice-select.min.js')}}"></script>
         <script src="{{asset('frontend/js/mixitup.min.js')}}"></script>
         <script src="{{asset('frontend/js/main.js')}}"></script>
+        <script src="{{asset('frontend/js/jquery.validate.min.js')}}"></script>
     </body>
 </html>

@@ -90,30 +90,6 @@ class ProductController extends Controller
     {
         // 
 
-        // $products = Product::find($id);
-
-        // if($products->image == null){
-        //     $products->idSP = $request->idSP;
-        //     $products->name_product = $request->name_product;
-        //     $products->quantity = $request->quantity;
-        //     $products->categories = $request->categories;
-        //     // Chay cau lenh php artisan storage:link de tao storage luu tru file.
-        //     $products->image = $request->file('image')->store('/uploads/image', 'public');
-        //     $products->price = $request->price;
-        // } else {
-        //     $products->idSP = $request->idSP;
-        //     $products->name_product = $request->name_product;
-        //     $products->quantity = $request->quantity;
-        //     $products->categories = $request->categories;
-        //     // Chay cau lenh php artisan storage:link de tao storage luu tru file.
-        //     $products->image = $request->file('image')->store('/uploads/image', 'public');
-        //     $products->price = $request->price;
-        // }
-        
-        // $products->save();
-        
-        // return redirect()->route('product.index')->with('update','Cap nhat san pham thanh cong');
-
         $products = Product::find($id);
         $image = request('image');
 

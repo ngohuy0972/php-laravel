@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Shopping') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -125,5 +125,6 @@
     <script src="{{asset('frontend/js/jquery.nice-select.min.js')}}"></script>
     <script src="{{asset('frontend/js/mixitup.min.js')}}"></script>
     <script src="{{asset('frontend/js/main.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.validate.min.js')}}"></script>
 </body>
 </html>
