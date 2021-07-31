@@ -27,7 +27,7 @@ class ProductValidateRequest extends FormRequest
     {
         return [
             //
-            'idSP' => 'required | min:3 | max:20',
+            'idSP' => 'required |unique:products,idSP| min:3 | max:20',
             'name_product' => 'required | min:5 | max:100',
             'quantity' => 'required | max:5',
             'categories' => 'required',
@@ -40,7 +40,7 @@ class ProductValidateRequest extends FormRequest
     public function messages() {
         return [
             'idSP.required' => 'Please fill out this field',
-            // 'idSP.unique' => 'This idSP is already exists',
+            'idSP.unique' => 'This idSP is already exists',
             'idSP.min' => 'This field must be least 3 characters',
             'idSP.max' => 'This field cannot exceed 20 characters',
             'name_product.required' => 'Please fill out this field',

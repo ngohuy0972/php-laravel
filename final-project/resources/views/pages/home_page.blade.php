@@ -6,7 +6,7 @@
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" style="margin-top: -15px;">
                 <div class="carousel-item active">
-                <img class="d-block w-100" src="{{asset('frontend/img/slider-1.jpg')}}" alt="First slide"/>
+                <img class="d-block w-100" src="{{asset('frontend/img/slider-3.jpg')}}" alt="First slide"/>
                 </div>
                 <div class="carousel-item">
                 <img class="d-block w-100" src="{{asset('frontend/img/slider-2.jpg')}}" alt="Second slide"/>

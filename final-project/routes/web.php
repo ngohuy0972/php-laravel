@@ -20,15 +20,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home_page', 'HomeController@index')->name('/home_page');
-Route::resource('/dashboard', 'DashboardController');
+// Route::resource('/dashboard', 'DashboardController');
 
-// Products
-Route::resource('/product', 'ProductController');
-Route::resource('/shop', 'ShopController');
-Route::resource('/product-detail', 'ProductDetailController');
-Route::resource('/checkout', 'CheckoutController');
-Route::resource('/shopping-cart', 'ShoppingCartController');
-Route::resource('/contact', 'ContactController');
-Route::resource('/clothes', 'ClothesController');
-Route::resource('/shoes', 'ShoesController');
-Route::resource('/accessories', 'AccessoriesController');
+// Products (Admin)
+Route::group(['middleware' => ['auth','role:admin']], function(){
+    Route::resource('/dashboard', 'DashboardController');
+});
+
+// Product (User)
+
+Route::group(['middleware' => ['auth','role:user']], function(){
+
+    Route::resource('/product', 'ProductController');
+    Route::resource('/shop', 'ShopController');
+    Route::resource('/product-detail', 'ProductDetailController');
+    Route::resource('/checkout', 'CheckoutController');
+    Route::resource('/shopping-cart', 'ShoppingCartController');
+    Route::resource('/contact', 'ContactController');
+    Route::resource('/clothes', 'ClothesController');
+    Route::resource('/shoes', 'ShoesController');
+    Route::resource('/accessories', 'AccessoriesController');
+});

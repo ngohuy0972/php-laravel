@@ -13,11 +13,11 @@
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-lg-2">
-                            <p class="in-name">Your Name</p>
+                            <p class="in-name">Username</p>
                         </div>
                         <div class="col-lg-10">
-                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-                            @error('name')
+                            <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" autofocus>
+                            @error('username')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
