@@ -78,8 +78,8 @@
                             <li><a href="{{asset('/accessories')}}">Phụ kiện</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{asset('/')}}">Bài viết</a></li>
-                    <li><a href="{{asset('/')}}">Về chúng tôi</a></li>
+                    <li><a href="{{asset('/post')}}">Bài viết</a></li>
+                    <li><a href="{{asset('/about-us')}}">Về chúng tôi</a></li>
                     <li><a href="{{asset('/contact')}}">Liên hệ</a></li>
                 </ul>
             </nav>

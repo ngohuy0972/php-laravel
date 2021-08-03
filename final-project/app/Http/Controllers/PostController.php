@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
 
-class DashboardController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +14,7 @@ class DashboardController extends Controller
     public function index()
     {
         //
-        $products = Product::paginate(5);
-
-        return view('dashboard')->with('products', $products);
+        return view('pages.posts.posts');
     }
 
     /**

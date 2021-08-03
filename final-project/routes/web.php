@@ -23,7 +23,7 @@ Route::get('/home_page', 'HomeController@index')->name('/home_page');
 // Route::resource('/dashboard', 'DashboardController');
 
 // Products (Admin)
-Route::group(['middleware' => ['auth','role:admin']], function(){
+Route::group(['middleware' => ['auth','role:user']], function(){
     Route::resource('/dashboard', 'DashboardController');
 });
 
@@ -40,4 +40,6 @@ Route::group(['middleware' => ['auth','role:user']], function(){
     Route::resource('/clothes', 'ClothesController');
     Route::resource('/shoes', 'ShoesController');
     Route::resource('/accessories', 'AccessoriesController');
+    Route::resource('/post', 'PostController');
+    Route::resource('/about-us', 'AboutUsController');
 });

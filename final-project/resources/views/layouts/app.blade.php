@@ -90,14 +90,20 @@
         <main class="py-4">
             {{-- Pages --}}
             @yield('home_page')
+            @yield('contact')
+            @yield('about_us')
+
+            {{-- Products --}}
             @yield('shop')
             @yield('product_detail')
             @yield('checkout')
             @yield('shopping_cart')
-            @yield('contact')
             @yield('clothes')
             @yield('shoes')
             @yield('accessories')
+
+            {{-- Posts --}}
+            @yield('all_posts')
 
             {{-- Admin --}}
             @yield('dashboard')
@@ -126,6 +132,13 @@
     <script src="{{asset('frontend/js/jquery.nice-select.min.js')}}"></script>
     <script src="{{asset('frontend/js/mixitup.min.js')}}"></script>
     <script src="{{asset('frontend/js/main.js')}}"></script>
+    {{-- <script>
+        $(function () {
+            $('.filter').change(function() {
+                $("#form_filter").submit();
+            })
+        })
+    </script> --}}
 
 </body>
 </html>

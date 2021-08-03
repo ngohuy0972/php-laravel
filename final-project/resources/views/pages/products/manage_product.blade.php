@@ -3,6 +3,34 @@
 @section('manage_product')
 <section class="cart-total-page spad">
     <div class="container">
+        <div class="categories-controls">
+            <div class="row">
+                <div class="col-lg-12" style="margin-bottom: 70px;
+                border-bottom: 2px solid #D0D7DB;">
+                    <h3 style="margin-bottom:15px;">Tất cả sản phẩm</h3>
+                </div>
+                <div class="col-lg-12">
+                    <div class="categories-filter">
+                        <div class="cf-left">
+                            <form id="form_filter" method="GET">
+                                <select class="sort" name="filter">
+                                    <option value="">Sort by</option>
+                                    <option value="name_sort">Name</option>
+                                    <option value="newest_sort">Newest</option>
+                                    <option value="price_sort">Price Lowest</option>
+                                </select>
+                            </form>
+                            
+                        </div>
+                        <div class="cf-right">
+                            <div class="active">
+                                <span>{{ $products->links()}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="col-lg-12">
             <div>
                 <button type="button" class="btn btn-success"><a href="{{asset('/product/create')}}">Create new Product</a></button>
@@ -39,7 +67,7 @@
                                     <i class="fas fa-trash"></i>Delete
                                 </button>
                             </form>   
-                            </td>
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>

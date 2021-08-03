@@ -14,10 +14,34 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
-        $products = Product::All();
+        $products = Product::paginate(5);
+
+        // if( $request->filter) {
+        //     $filter = $request-> filter;
+
+        //     switch ($filter) {
+        //         case 'name_sort':
+        //             # code...
+        //             $products = Product::scopeFilterName();
+        //             break;
+        //         case 'newest_sort':
+        //             # code...
+        //             $products = Product::scopeFilterNewest();
+        //             break;
+        //         case 'price_sort':
+        //             # code...
+        //             $products = Product::scopeFilterPrice();
+        //             break;
+        //         default:
+        //             # code...
+        //             $products = Product::paginate(10);
+        //             break;
+        //     }
+        // }
+
         return view('pages.products.manage_product')->with('products', $products);
     }
 
@@ -115,13 +139,7 @@ class ProductController extends Controller
                 $products->categories = $request->categories;
                 $products->image = $imagePath;
                 $products->price = $request->price;
-            } else {
-                $products->idSP = $request->idSP;
-                $products->name_product = $request->name_product;
-                $products->quantity = $request->quantity;
-                $products->categories = $request->categories;
-                $products->price = $request->price;
-            }
+            } 
             $products->save();
         }
         $products->save();

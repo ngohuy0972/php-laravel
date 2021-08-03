@@ -150,6 +150,33 @@ ol {
 	color: #fff;
 }
 
+/* Dashboard */
+
+.tablinks {
+	width: 24.5%;
+    background: transparent;
+	border:none;
+    border-bottom: 1px solid #e0e0e0;
+    height: 50px;
+    line-height: 50px;
+}
+
+.tablinks a {
+	color: #000;
+}
+
+.tablinks.active {
+	border-bottom: 4px solid #525252;
+}
+
+.tablinks i {
+	margin-right: 10px;
+}
+
+/* .tabcontent {
+	display: none; 
+} */
+
 /* buttons */
 
 .primary-btn {
@@ -664,8 +691,23 @@ ol {
 }
 
 .features-box .single-box-item.first-box .box-text .primary-btn {
-	border-color: #D0D7DB;
+	border-color: #fff;
 	color: #1e1e1e;
+}
+
+.box-text .primary-btn {
+    border-color: #fff;
+    color: #1e1e1e;
+}
+
+.features-box .single-box-item.first-box .box-text .primary-btn:hover {
+	border-color: #000;
+	color: #1e1e1e;
+}
+
+.box-text .primary-btn:hover {
+    border-color: #000;
+    color: #1e1e1e;
 }
 
 .features-box .single-box-item.second-box {
@@ -1165,11 +1207,51 @@ ol {
 	position: relative;
 }
 
+/* Panigate Pages */
+
+.cf-right span {
+	color: #838383;
+	font-size: 12px;
+	font-weight: 500;
+	margin-right: 15px;
+}
+
+.page-item {
+	color: #838383;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 0px;
+}
+
+.page-item.active {
+	color: #838383;
+    font-size: 12px;
+    font-weight: 500;
+    margin-right: 0px;
+    border-bottom: 2px solid #838383;
+    width: 30px;
+}
+
+.page-item .page-link {
+    background-color: transparent;
+	border-color: transparent;
+}
+
+.page-item.active .page-link {
+    background-color: transparent;
+	border-color: transparent;
+}
+
+.page-item.disabled .page-link {
+    background-color: transparent;
+	border-color: transparent;
+}
+
 .categories-controls .categories-filter .cf-right a.active:after {
 	opacity: 1;
 }
 
-.categories-controls .categories-filter .cf-right a:after {
+/* .categories-controls .categories-filter .cf-right a:after {
 	position: absolute;
 	left: 0;
 	bottom: -2px;
@@ -1180,7 +1262,7 @@ ol {
 	opacity: 0;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
-}
+} */
 
 .categories-controls .categories-filter .cf-right a:hover:after {
 	opacity: 1;
@@ -2334,7 +2416,7 @@ li,ul{
 }
 
 #navigation {
-    background: #0e1a35;
+    background: transparent;
 }
 
 #navigation {
@@ -2349,7 +2431,7 @@ li,ul{
 }
 
 .display-table-row {
-    display: table-row;
+    display: grid;
     height: 100%;
 }
 
