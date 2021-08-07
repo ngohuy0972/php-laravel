@@ -7,8 +7,10 @@
 <div class="search-model">
     <div class="h-100 d-flex align-items-center justify-content-center">
         <div class="search-close-switch">+</div>
-        <form class="search-model-form">
-            <input type="text" id="search-input" placeholder="Search here.....">
+        <form class="search-model-form" method="GET" autocomplete="off">
+            @csrf
+            <input type="text" id="search_input" name="search_key" placeholder="Search here...">
+            <div class="search_ajax"></div>
         </form>
     </div>
 </div>
@@ -86,6 +88,29 @@
         </div>
     </div>
 </header>
+{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $('#search_input').keyup(function() {
+        var keywords = $(this).val();
+
+        if(keywords != '') {
+
+            var csrf_token = $('input[name="csrf_token"]').val();
+
+            $.ajax({
+                url:"{{url('/search-ajax')}}",
+                method:"POST",
+                data:{keywords:keywords, csrf_token:csrf_token},
+                success:function(data) {
+                    $('#search_ajax').fadeIn();
+                    $('#search_ajax').html(data);
+                }
+            });
+        } else {
+            $('#search_ajax').fadeOut(); 
+        }
+    });
+</script> --}}
 <!-- Header Info Begin -->
 {{-- <div class="header-info">
     <div class="container-fluid">

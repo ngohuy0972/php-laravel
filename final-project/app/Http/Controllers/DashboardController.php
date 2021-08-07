@@ -15,9 +15,9 @@ class DashboardController extends Controller
     public function index()
     {
         //
-        $products = Product::paginate(5);
+        // $products = Product::paginate(5);
 
-        return view('dashboard')->with('products', $products);
+        return view('dashboard');
     }
 
     /**

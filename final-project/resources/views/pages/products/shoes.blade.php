@@ -19,14 +19,35 @@
                 <div class="col-lg-12">
                     <div class="categories-filter">
                         <div class="cf-left">
-                            <form action="#">
-                                <select class="sort">
-                                    <option value="">Sort by</option>
-                                    <option value="">Orders</option>
-                                    <option value="">Newest</option>
-                                    <option value="">Price</option>
-                                </select>
-                            </form>
+                            <div class="dropdown-filter">
+                                <button onclick="myFunction()" class="dropbtn">Sort By</button>
+                                <div id="myDropdown" class="dropdown-item">
+                                  <a href="{{asset('/name_sort')}}">Name</a>
+                                  <a href="{{asset('/newest_sort')}}">Newest</a>
+                                  <a href="{{asset('/price_sort')}}">Price</a>
+                                </div>
+                              </div>
+                        <script>
+                            /* When the user clicks on the button,
+                            toggle between hiding and showing the dropdown content */
+                            function myFunction() {
+                            document.getElementById("myDropdown").classList.toggle("show");
+                            }
+
+                            // Close the dropdown menu if the user clicks outside of it
+                            window.onclick = function(event) {
+                            if (!event.target.matches('.dropbtn')) {
+                                var dropdowns = document.getElementsByClassName("dropdown-item");
+                                var i;
+                                for (i = 0; i < dropdowns.length; i++) {
+                                var openDropdown = dropdowns[i];
+                                if (openDropdown.classList.contains('show')) {
+                                    openDropdown.classList.remove('show');
+                                }
+                                }
+                            }
+                            }
+                        </script>
                         </div>
                         <div class="cf-right">
                             <div class="active"> {{ $shoes->links()}}</div>

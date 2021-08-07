@@ -16,31 +16,7 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        //
         $products = Product::paginate(5);
-
-        // if( $request->filter) {
-        //     $filter = $request-> filter;
-
-        //     switch ($filter) {
-        //         case 'name_sort':
-        //             # code...
-        //             $products = Product::scopeFilterName();
-        //             break;
-        //         case 'newest_sort':
-        //             # code...
-        //             $products = Product::scopeFilterNewest();
-        //             break;
-        //         case 'price_sort':
-        //             # code...
-        //             $products = Product::scopeFilterPrice();
-        //             break;
-        //         default:
-        //             # code...
-        //             $products = Product::paginate(10);
-        //             break;
-        //     }
-        // }
 
         return view('pages.products.manage_product')->with('products', $products);
     }

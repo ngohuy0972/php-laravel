@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('manage_product')
+@section('newest_sort')
 <section class="cart-total-page spad">
     <div class="container">
         <div class="categories-controls">
@@ -15,9 +15,9 @@
                             <div class="dropdown-filter">
                                 <button onclick="myFunction()" class="dropbtn">Sort By</button>
                                 <div id="myDropdown" class="dropdown-item">
-                                  <a href="{{asset('/name_sort')}}">Name</a>
-                                  <a href="{{asset('/newest_sort')}}">Newest</a>
-                                  <a href="{{asset('/price_sort')}}">Price</a>
+                                    <a href="{{asset('/name_sort')}}">Name</a>
+                                    <a href="{{asset('/newest_sort')}}">Newest</a>
+                                    <a href="{{asset('/price_sort')}}">Price</a>
                                 </div>
                               </div>
                         </div>

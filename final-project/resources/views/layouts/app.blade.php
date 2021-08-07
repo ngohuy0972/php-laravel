@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('frontend/css/font-awesome.min.css')}}" type="text/css">
     <link rel="stylesheet" href="{{asset('frontend/css/nice-select.css')}}" type="text/css">
@@ -88,6 +89,12 @@
         </nav> --}}
         @include('elements.header')
         <main class="py-4">
+
+            {{-- Filters pages --}}
+            @yield('newest_sort')
+            @yield('name_sort')
+            @yield('price_sort')
+
             {{-- Pages --}}
             @yield('home_page')
             @yield('contact')
@@ -123,8 +130,10 @@
     </div>
 
     <!-- Js Plugins -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="{{asset('frontend/js/jquery.validate.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    {{-- <script src="{{asset('frontend/js/jquery.validate.js')}}"></script> --}}
     <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery.magnific-popup.min.js')}}"></script>
     <script src="{{asset('frontend/js/jquery.slicknav.js')}}"></script>
@@ -132,13 +141,6 @@
     <script src="{{asset('frontend/js/jquery.nice-select.min.js')}}"></script>
     <script src="{{asset('frontend/js/mixitup.min.js')}}"></script>
     <script src="{{asset('frontend/js/main.js')}}"></script>
-    {{-- <script>
-        $(function () {
-            $('.filter').change(function() {
-                $("#form_filter").submit();
-            })
-        })
-    </script> --}}
 
 </body>
 </html>
