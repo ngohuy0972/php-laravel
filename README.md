@@ -5,7 +5,8 @@
 3. composer install & composer update
 4. php artisan storage:link (create file storage)
 5. php artisan migrate:refresh
-6. php artisan key:generate
-7. php artisan serve
+6. php artisan db:seed
+7. php artisan key:generate
+8. php artisan serve
 
 open browser anh check the following address.
