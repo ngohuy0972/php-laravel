@@ -28,7 +28,7 @@ class ProductSeeder extends Seeder
             }
             // Chay cau lenh php artisan storage:link de tao storage luu tru file.
             $products->image = ('/uploads/image/bCYzgy5inhq9OjIOF0HUAK7Wkr9nGKbzNMacSGCL.jpg');
-            $products->price = '100000';
+            $products->price = '1'.$i.'000';
             $products->save();
              
         }

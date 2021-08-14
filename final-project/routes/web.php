@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home_page', 'HomeController@index')->name('/home_page');
-Route::post('/search', [IndexController::class, 'search_ajax']);
 
 // Products (Admin)
 Route::group(['middleware' => ['auth','role:user']], function(){
@@ -44,7 +44,9 @@ Route::group(['middleware' => ['auth','role:user']], function(){
     Route::resource('/about-us', 'AboutUsController');
 
     //filter pages
-    Route::get('/newest_sort', 'FilterController@sortByTime')->name('newest_sort');
-    Route::get('/name_sort', 'FilterController@sortByName')->name('name_sort');
-    Route::get('/price_sort', 'FilterController@sortByPrice')->name('price_sort');
+    // Route::get('/all_sort', 'FilterController@sortById')->name('all_sort');
+    Route::post('/newest_sort', 'FilterController@sortByTime')->name('newest_sort');
+    Route::post('/name_sort', 'FilterController@sortByName')->name('name_sort');
+    Route::post('/price_sort', 'FilterController@sortByPrice')->name('price_sort');
+    Route::post('/all_product', 'FilterController@allProduct')->name('all_product');
 });

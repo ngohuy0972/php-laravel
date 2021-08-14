@@ -14,7 +14,7 @@
                     <div class="col-lg-12 display-table-cell v-align box" id="navigation">
                         <div class="tabs">
                             <button class="tablinks active"><a href="{{asset('/')}}"><i class="fa fa-home" aria-hidden="true"></i>Home</a></button>
-                            <button class="tablinks"><a href="{{asset('/product')}}"><i class="fa fa-archive" aria-hidden="true"></i>Products</a></button>
+                            <button class="tablinks"><a href="{{route('product.index')}}"><i class="fa fa-archive" aria-hidden="true"></i>Products</a></button>
                             <button class="tablinks"><a href="{{asset('/dashboard')}}"><i class="fa fa-paste" aria-hidden="true"></i>Posts</a></button>
                             <button class="tablinks"><a href="{{asset('/dashboard')}}"><i class="fa fa-user" aria-hidden="true"></i>Users</a></button>  
                         </div>

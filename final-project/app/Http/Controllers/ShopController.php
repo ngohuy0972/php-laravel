@@ -15,8 +15,9 @@ class ShopController extends Controller
     public function index()
     {
         //
-        $items = Product::paginate(12);
-        return view('pages.products.shop')->with('items', $items);
+        $items = Product::orderBy('created_at', 'DESC')->take(8)->get();
+        
+        return view('pages.products.shop')->with(compact('items'));
     }
 
     /**

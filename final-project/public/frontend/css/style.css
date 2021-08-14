@@ -1423,11 +1423,19 @@ ol {
 
 .more-product {
 	margin-top: 16px;
+	width: 100%;
 }
 
 .more-product .primary-btn {
 	color: #242424;
 	border-color: #D0D7DB;
+	font-weight: 700;
+}
+
+.more-product .primary-btn:hover {
+	color: #fff;
+	border-color: #D0D7DB;
+	background: #000;
 	font-weight: 700;
 }
 

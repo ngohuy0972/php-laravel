@@ -115,7 +115,14 @@ class ProductController extends Controller
                 $products->categories = $request->categories;
                 $products->image = $imagePath;
                 $products->price = $request->price;
-            } 
+            } else{
+                $products->idSP = $request->idSP;
+                $products->name_product = $request->name_product;
+                $products->quantity = $request->quantity;
+                $products->categories = $request->categories;
+                // $products->image = $imagePath;
+                $products->price = $request->price;
+            }
             $products->save();
         }
         $products->save();

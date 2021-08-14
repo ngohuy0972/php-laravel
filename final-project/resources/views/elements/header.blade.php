@@ -73,16 +73,16 @@
             <nav class="main-menu mobile-menu">
                 <ul>
                     <li><a class="active" href="{{asset('/')}}">Trang chủ</a></li>
-                    <li><a href="{{asset('/shop')}}">Cửa hàng</a>
+                    <li><a href="{{route('shop.index')}}">Cửa hàng</a>
                         <ul class="sub-menu">
-                            <li><a href="{{asset('/clothes')}}">Quần áo</a></li>
-                            <li><a href="{{asset('/shoes')}}">Giày dép</a></li>
-                            <li><a href="{{asset('/accessories')}}">Phụ kiện</a></li>
+                            <li><a href="{{route('clothes.index')}}">Quần áo</a></li>
+                            <li><a href="{{route('shoes.index')}}">Giày dép</a></li>
+                            <li><a href="{{route('accessories.index')}}">Phụ kiện</a></li>
                         </ul>
                     </li>
-                    <li><a href="{{asset('/post')}}">Bài viết</a></li>
-                    <li><a href="{{asset('/about-us')}}">Về chúng tôi</a></li>
-                    <li><a href="{{asset('/contact')}}">Liên hệ</a></li>
+                    <li><a href="{{route('post.index')}}">Bài viết</a></li>
+                    <li><a href="{{route('about-us.index')}}">Về chúng tôi</a></li>
+                    <li><a href="{{route('contact.index')}}">Liên hệ</a></li>
                 </ul>
             </nav>
         </div>
