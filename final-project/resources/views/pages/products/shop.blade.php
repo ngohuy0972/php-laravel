@@ -90,6 +90,8 @@
           $(document).on('click', '#load_more_product', function () {
               var id = $(this).data('id');
               allProduct(id);
+              alert(id);
+
           });
           break;
         case name_sort:
@@ -97,6 +99,7 @@
           $(document).on('click', '#load_more_product', function () {
               var id = $(this).data('id');
               sortName(id);
+              alert(id);
           });
           break;
         case time_sort:
@@ -104,6 +107,8 @@
           $(document).on('click', '#load_more_product', function () {
               var id = $(this).data('id');
               sortTime(id);
+              alert(id);
+
           });
           break;
         case price_sort:
@@ -111,6 +116,8 @@
           $(document).on('click', '#load_more_product', function () {
               var id = $(this).data('id');
               sortPrice(id);
+              alert(id);
+
           });
           break;
       
@@ -144,24 +151,24 @@
     }
 
     // Sort Name
-    function sortName(name = '') {
-        $.ajax({
-          url : "{{ route('name_sort') }}",
-          type : "POST",
+    function sortName(name_product = '') {
+      $.ajax({
+            url : "{{ route('name_sort') }}",
+            type : "POST",
 
-          headers:{
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-          },
-          data : {name_product:name},
-          success : function (data) {
-            $('#load_more_product').remove();
-            $('#product_section').append(data);
-            // $('#product-setion').replaceWith(data);
-          }
-        });
+            headers:{
+              'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data : {name_product:name_product},
+            success : function (data) {
+              $('#load_more_product').remove();
+              $('#product_section').append(data);
+              // $('#product-setion').replaceWith(data);
+            }
+          });
     }
 
-    function sortTime(time = '') {
+    function sortTime(created_at = '') {
       $.ajax({
             url : "{{ route('newest_sort') }}",
             type : "POST",
@@ -169,7 +176,7 @@
             headers:{
               'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             },
-            data : {time:time},
+            data : {created_at:created_at},
             success : function (data) {
               $('#load_more_product').remove();
               $('#product_section').append(data);

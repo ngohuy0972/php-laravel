@@ -23,13 +23,8 @@ Auth::routes();
 Route::get('/home_page', 'HomeController@index')->name('/home_page');
 
 // Products (Admin)
-Route::group(['middleware' => ['auth','role:user']], function(){
+Route::group(['middleware' => ['auth','role:admin']], function(){
     Route::resource('/dashboard', 'DashboardController');
-});
-
-// Product (User)
-
-Route::group(['middleware' => ['auth','role:user']], function(){
 
     Route::resource('/product', 'ProductController');
     Route::resource('/shop', 'ShopController');
@@ -50,3 +45,4 @@ Route::group(['middleware' => ['auth','role:user']], function(){
     Route::post('/price_sort', 'FilterController@sortByPrice')->name('price_sort');
     Route::post('/all_product', 'FilterController@allProduct')->name('all_product');
 });
+

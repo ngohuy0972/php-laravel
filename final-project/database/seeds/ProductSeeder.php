@@ -13,12 +13,12 @@ class ProductSeeder extends Seeder
     public function run()
     {
         //
-        for ($i = 1; $i <= 50; $i++) {
+        for ($i = 1; $i <= 30; $i++) {
 
             $products = new Product();
             $products->idSP = 'SP'.$i;
             $products->name_product = 'San Pham '.$i;
-            $products->quantity = '01';
+            $products->quantity = 1;
             if($i % 3 == 0){
                 $products->categories = 'accessories';
             } elseif ($i % 2 == 0) {
@@ -28,7 +28,7 @@ class ProductSeeder extends Seeder
             }
             // Chay cau lenh php artisan storage:link de tao storage luu tru file.
             $products->image = ('/uploads/image/bCYzgy5inhq9OjIOF0HUAK7Wkr9nGKbzNMacSGCL.jpg');
-            $products->price = '1'.$i.'000';
+            $products->price = ''.$i.'000';
             $products->save();
              
         }

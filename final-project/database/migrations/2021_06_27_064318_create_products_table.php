@@ -17,10 +17,10 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('idSP');
             $table->string('name_product');
-            $table->string('quantity');
+            $table->integer('quantity');
             $table->string('categories');
             $table->string('image');
-            $table->string('price');
+            $table->decimal('price', 8, 2);
             $table->timestamps();
         });
     }

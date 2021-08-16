@@ -12,16 +12,20 @@ class FilterController extends Controller
     public function allProduct(Request $request) {
   
         $data = $request->all();
+        var_dump($data);
+        
         if($data['id'] > 0){
-          $products = Product::where('id', '<', $data['id'])
-                            ->orderBy('id', 'DESC')
+          $products = Product::where('id', '>', $data['id'])
+                            ->orderBy('id', 'ASC')
                             ->take(8)
                             ->get();
-  
+  echo ('all product => dung');
         } else {
-          $products = Product::orderBy('id', 'DESC')
+          $products = Product::orderBy('id', 'ASC')
                             ->take(8)
                             ->get();
+  echo ('all product => sai');
+
         }
   
         $output = '';
@@ -66,17 +70,22 @@ class FilterController extends Controller
     
     public function sortByName(Request $request) {
         $data = $request->all();
+        var_dump($data);
     
         if($data['name_product'] > 0){
-          $products = Product::where('name_product', '<', $data['name_product'])
+          $products = Product::where('name_product', '>', $data['name_product'])
                             ->orderBy('name_product', 'DESC')
                             ->take(8)
                             ->get();
   
+  echo ('name => dung');
+        
         } else {
           $products = Product::orderBy('name_product', 'DESC')
                             ->take(8)
                             ->get();
+        echo ('name => sai');
+
         }
 
         $output = '';
@@ -115,25 +124,30 @@ class FilterController extends Controller
                             </div>
                         </div>';
         }
-        // var_dump($last_name);
+        var_dump($last_name);
         // exit();
         echo $output;
     }
 
     public function sortByTime(Request $request){
         $data = $request->all();
+        var_dump($data);
 
-        if($data['time'] > 0){
-            $products = Product::where('created_at', '<', $data['time'])
-                              ->orderBy('created_at', 'ASC')
+        if($data['created_at'] > 0){
+            $products = Product::where('created_at', '<', $data['created_at'])
+                              ->orderBy('created_at', 'DESC')
                               ->take(8)
                               ->get();
-    
+  echo ('time => dung');
+
           } else {
-            $products = Product::orderBy('created_at', 'ASC')
+            $products = Product::orderBy('created_at', 'DESC')
                               ->take(8)
                               ->get();
+  echo ('time => sai');
+
           }
+          var_dump($data);
   
           $output = '';
           if(!$products->isEmpty()){
@@ -171,24 +185,27 @@ class FilterController extends Controller
                               </div>
                           </div>';
           }
-        //   var_dump($last_price);
+        //   var_dump($last_time);
         //   exit();
           echo $output;
     }
 
     public function sortByPrice(Request $request){
         $data = $request->all();
+        var_dump($data);
 
         if($data['price'] > 0){
             $products = Product::where('price', '<', $data['price'])
                               ->orderBy('price', 'DESC')
                               ->take(8)
                               ->get();
+                              echo('price => dung');
     
           } else {
             $products = Product::orderBy('price', 'DESC')
                               ->take(8)
                               ->get();
+                              echo('price => sai');
           }
   
           $output = '';
