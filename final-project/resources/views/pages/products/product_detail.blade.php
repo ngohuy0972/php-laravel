@@ -31,22 +31,23 @@
             border-bottom: 2px solid #D0D7DB;">
                 <h3 style="margin-bottom:15px;">Chi tiết sản phẩm</h3>
             </div>
-            <div class="product-control">
+            {{-- <div class="product-control">
                 <a href="#">Previous</a>
                 <a href="#">Next</a>
-            </div>
+            </div> --}}
+            @foreach ($items as $item)
             <div class="row">
                 <div class="col-lg-6">
                     <div class="product-slider owl-carousel">
                         <div class="product-img">
                             <figure>
-                                <img src="{{asset('frontend/img/product/product-1.jpg')}}" alt="">
+                                <img src="{{asset('/storage/'.$item->image)}}" alt="">
                                 <div class="p-status">new</div>
                             </figure>
                         </div>
                         <div class="product-img">
                             <figure>
-                                <img src="{{asset('frontend/img/product/product-1.jpg')}}" alt="">
+                                <img src="{{asset('/storage/'.$item->image)}}" alt="">
                                 <div class="p-status">new</div>
                             </figure>
                         </div>
@@ -55,9 +56,9 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="product-content">
-                        <h2>Dotted Blue Shirt</h2>
+                        <h2>{{ $item->name_product }}</h2>
                         <div class="pc-meta">
-                            <h5>$22.90</h5>
+                            <h5>{{ $item->price }}</h5>
                             <div class="rating">
                                 <i class="fa fa-star"></i>
                                 <i class="fa fa-star"></i>
@@ -87,6 +88,7 @@
                     </div>
                 </div>
             </div>
+            @endforeach
         </div>
     </section>
     <!-- Product Page Section End -->

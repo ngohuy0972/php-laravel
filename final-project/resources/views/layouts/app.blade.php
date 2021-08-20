@@ -108,6 +108,7 @@
             @yield('clothes')
             @yield('shoes')
             @yield('accessories')
+            @yield('search_product')
 
             {{-- Posts --}}
             @yield('all_posts')

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SearchController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -39,10 +40,14 @@ Route::group(['middleware' => ['auth','role:admin']], function(){
     Route::resource('/about-us', 'AboutUsController');
 
     //filter pages
-    // Route::get('/all_sort', 'FilterController@sortById')->name('all_sort');
     Route::post('/newest_sort', 'FilterController@sortByTime')->name('newest_sort');
     Route::post('/name_sort', 'FilterController@sortByName')->name('name_sort');
     Route::post('/price_sort', 'FilterController@sortByPrice')->name('price_sort');
     Route::post('/all_product', 'FilterController@allProduct')->name('all_product');
+
+    // Search
+    Route::get('/search', 'SearchEngineController@searchEngine')->name('search');
+    Route::get('/search_result', 'SearchEngineController@searchIndex')->name('search_result');
+
 });
 

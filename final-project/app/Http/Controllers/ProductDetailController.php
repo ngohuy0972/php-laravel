@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class ProductDetailController extends Controller
@@ -11,9 +12,13 @@ class ProductDetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         //
+        // $id = $request->all();
+        // $id = $_GET['id'];
+        // var_dump($id);
+
         return view('pages.products.product_detail');
     }
 
@@ -47,6 +52,10 @@ class ProductDetailController extends Controller
     public function show($id)
     {
         //
+        $items = Product::where('id', '=', $id)->get();
+        // var_dump($items);
+
+        return view('pages.products.product_detail', compact('items'));
     }
 
     /**

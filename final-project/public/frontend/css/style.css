@@ -182,6 +182,25 @@ ol {
 	display: none; 
 } */
 
+
+/* Search */
+
+#search_ajax ul {
+	display: block;
+    position: relative;
+    width: 100%;
+	overflow-y: auto;
+}
+
+#search_ajax ul li a {
+	color: #838383;
+    font-size: 22px;
+    background-color: #fff;
+    font-weight: 450;
+    line-height: 45px;
+    margin-left: 5%;
+}
+
 /* buttons */
 
 .primary-btn {
@@ -486,6 +505,7 @@ ol {
 	border-bottom: 2px solid #333;
 	background: none;
 	color: #999;
+	margin-top: 100%;
 }
 
 .search-close-switch {

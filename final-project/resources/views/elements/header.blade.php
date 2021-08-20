@@ -5,12 +5,12 @@
 
 <!-- Search model -->
 <div class="search-model">
-    <div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="h-100 d-flex align-items justify-content-center">
         <div class="search-close-switch">+</div>
-        <form class="search-model-form" method="GET" autocomplete="off">
-            @csrf
-            <input type="text" id="search_input" name="search_key" placeholder="Search here...">
-            <div class="search_ajax"></div>
+        <form class="search-model-form" action="{{route('search_result')}}" method="GET" autocomplete="off">
+            <input type="text" id="keyword" name="keyword" placeholder="Search here...">
+            <div id="search_ajax">
+            </div>
         </form>
     </div>
 </div>
@@ -88,29 +88,35 @@
         </div>
     </div>
 </header>
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script type="text/javascript">
-    $('#search_input').keyup(function() {
-        var keywords = $(this).val();
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $('#keyword').keyup(function() {
+        var keyword = $(this).val();
+        // console.log(keyword);
+        if(keyword != ''){
+          $.ajax({
+            url : "{{ route('search') }}",
+            method : "GET",
 
-        if(keywords != '') {
-
-            var csrf_token = $('input[name="csrf_token"]').val();
-
-            $.ajax({
-                url:"{{url('/search-ajax')}}",
-                method:"POST",
-                data:{keywords:keywords, csrf_token:csrf_token},
-                success:function(data) {
-                    $('#search_ajax').fadeIn();
-                    $('#search_ajax').html(data);
-                }
-            });
+            headers:{
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+            data : {keyword:keyword},
+            success : function (data) {
+                $('#search_ajax').fadeIn();
+                $('#search_ajax').html(data);
+            }
+          })
         } else {
-            $('#search_ajax').fadeOut(); 
+            $('#search_ajax').fadeOut();
         }
+
+        $(document).on('click', '.item-search-ajax', function(){
+            $('#keyword').val($(this).text());
+            $('#search_ajax').fadeOut();
+        });
     });
-</script> --}}
+</script>
 <!-- Header Info Begin -->
 {{-- <div class="header-info">
     <div class="container-fluid">

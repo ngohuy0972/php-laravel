@@ -38,7 +38,7 @@ class FilterController extends Controller
                                   <img src="/storage/'.$item->image.'" alt="product-image">
                               </figure>
                               <div class="product-text">
-                                  <a href="">
+                                  <a href="'.route('product-detail.show', $item->id).'">
                                       <h6>' .$item->name_product. '</h6>
                                   </a>
                                   <p>'.$item->price.'</p>
@@ -68,65 +68,64 @@ class FilterController extends Controller
 
        }
     
-    public function sortByName(Request $request) {
+       public function sortByName(Request $request){
         $data = $request->all();
         var_dump($data);
-    
+
         if($data['name_product'] > 0){
-          $products = Product::where('name_product', '>', $data['name_product'])
-                            ->orderBy('name_product', 'DESC')
-                            ->take(8)
-                            ->get();
-  
+            $products = Product::where('name_product', '<', $data['name_product'])
+                              ->orderBy('name_product', 'DESC')
+                              ->take(8)
+                              ->get();
   echo ('name => dung');
-        
-        } else {
-          $products = Product::orderBy('name_product', 'DESC')
-                            ->take(8)
-                            ->get();
-        echo ('name => sai');
 
-        }
+          } else {
+            $products = Product::orderBy('name_product', 'DESC')
+                              ->take(8)
+                              ->get();
+  echo ('name => sai');
 
-        $output = '';
-        if(!$products->isEmpty()){
-            foreach($products as $item){
-                $last_name = $item->name_product;
-                $output .= '<div class="col-lg-3 col-md-3">
-                            <div class="single-product-item">
-                                <figure>
-                                    <img src="/storage/'.$item->image.'" alt="product-image">
-                                </figure>
-                                <div class="product-text">
-                                    <a href="">
-                                        <h6>' .$item->name_product. '</h6>
-                                    </a>
-                                    <p>'.$item->price.'</p>
-                                </div>
-                            </div>
-                            </div>' ;
-            }
-            
-                $output .= '<div class="more-product">
-                                <div class="row">
-                                    <div class="col-lg-12 col-md-12 text-center">
-                                        <button class="primary-btn" name="load_more_product" id="load_more_product" data-id="'.$last_name.'">Xem thêm</button>
-                                    </div>
-                                </div>
-                            </div>';
-            } else {
-
-            $output .= '<div class="more-product">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 text-center">
-                                    <button class="primary-btn" name="load_more_product">Đã tải xong sản phẩm</button>
-                                </div>
-                            </div>
-                        </div>';
-        }
-        var_dump($last_name);
-        // exit();
-        echo $output;
+          }
+  
+          $output = '';
+          if(!$products->isEmpty()){
+              foreach($products as $item){
+                  $last_name = $item->name_product;
+                  $output .= '<div class="col-lg-3 col-md-3">
+                              <div class="single-product-item">
+                                  <figure>
+                                      <img src="/storage/'.$item->image.'" alt="product-image">
+                                  </figure>
+                                  <div class="product-text">
+                                      <a href="'.route('product-detail.show', $item->id).'">
+                                          <h6>' .$item->name_product. '</h6>
+                                      </a>
+                                      <p>'.$item->price.'</p>
+                                  </div>
+                              </div>
+                              </div>' ;
+              }
+              
+                  $output .= '<div class="more-product">
+                                  <div class="row">
+                                      <div class="col-lg-12 col-md-12 text-center">
+                                          <button class="primary-btn" name="load_more_product" id="load_more_product" data-id="'.$last_name.'">Xem thêm</button>
+                                      </div>
+                                  </div>
+                              </div>';
+              } else {
+  
+              $output .= '<div class="more-product">
+                              <div class="row">
+                                  <div class="col-lg-12 col-md-12 text-center">
+                                      <button class="primary-btn" name="load_more_product">Đã tải xong sản phẩm</button>
+                                  </div>
+                              </div>
+                          </div>';
+          }
+        //   var_dump($last_time);
+        //   exit();
+          echo $output;
     }
 
     public function sortByTime(Request $request){
@@ -159,7 +158,7 @@ class FilterController extends Controller
                                       <img src="/storage/'.$item->image.'" alt="product-image">
                                   </figure>
                                   <div class="product-text">
-                                      <a href="">
+                                      <a href="'.route('product-detail.show', $item->id).'">
                                           <h6>' .$item->name_product. '</h6>
                                       </a>
                                       <p>'.$item->price.'</p>
@@ -218,7 +217,7 @@ class FilterController extends Controller
                                       <img src="/storage/'.$item->image.'" alt="product-image">
                                   </figure>
                                   <div class="product-text">
-                                      <a href="">
+                                      <a href="'.route('product-detail.show', $item->id).'">
                                           <h6>' .$item->name_product. '</h6>
                                       </a>
                                       <p>'.$item->price.'</p>
