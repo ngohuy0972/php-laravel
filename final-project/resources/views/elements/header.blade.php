@@ -61,7 +61,7 @@
                         @endguest
                     </div>
                 </div>
-                <a href="{{asset('/shopping-cart')}}">
+                <a href="{{ route('shopping-cart') }}">
                     <img src="{{asset('frontend/img/icons/bag.png')}}" alt="">
                     <span>2</span>
                 </a>

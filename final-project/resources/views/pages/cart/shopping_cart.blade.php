@@ -22,22 +22,24 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($product_data as $item)
                         <tr>
                             <td class="product-col">
-                                <img src="{{asset('frontend/img/product/product-1.jpg')}}" alt="">
+                                <img src="{{asset('/storage/'.$item->image )}}" alt="">
                                 <div class="p-title">
-                                    <h5>Áo Thun</h5>
+                                    <h5>{{ $item->name_product }}</h5>
                                 </div>
                             </td>
-                            <td class="price-col">$29</td>
+                            <td class="price-col">{{ number_format($item->price).' '.'VND' }}</td>
                             <td class="quantity-col">
                                 <div class="pro-qty">
-                                    <input type="text" value="1">
+                                    <input type="text" id="product_quantity" name="product_quantity" value="1">
                                 </div>
                             </td>
-                            <td class="total">$29</td>
+                            <td class="total">{{ number_format($item->price).' '.'VND' }}</td>
                             <td class="product-close">x</td>
                         </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

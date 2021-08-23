@@ -31,13 +31,14 @@ Route::group(['middleware' => ['auth','role:admin']], function(){
     Route::resource('/shop', 'ShopController');
     Route::resource('/product-detail', 'ProductDetailController');
     Route::resource('/checkout', 'CheckoutController');
-    Route::resource('/shopping-cart', 'ShoppingCartController');
     Route::resource('/contact', 'ContactController');
     Route::resource('/clothes', 'ClothesController');
     Route::resource('/shoes', 'ShoesController');
     Route::resource('/accessories', 'AccessoriesController');
     Route::resource('/post', 'PostController');
     Route::resource('/about-us', 'AboutUsController');
+    Route::post('/add-to-cart', 'CartController@addToCart')->name('add_to_cart');
+    Route::get('/shopping-cart', 'CartController@index')->name('shopping-cart');
 
     //filter pages
     Route::post('/newest_sort', 'FilterController@sortByTime')->name('newest_sort');

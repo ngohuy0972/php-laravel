@@ -17,16 +17,9 @@
                 <h3 style="margin-bottom:15px;">Kết quả tìm kiếm</h3>
             </div>
                 <div class="col-lg-12">
-                    <div class="categories-filter">
+                    {{-- <div class="categories-filter">
                         <div class="cf-left">
                             <div class="dropdown-filter">
-                                {{-- <button onclick="myFunction()" class="dropbtn">Sort By</button>
-                                <div id="myDropdown" class="dropdown-item">
-                                  <a href="javascript:void(0)" onclick="sortName()">Name</a>
-                                  <a href="javascript:void(0)" onclick="sortNewest()">Newest</a>
-                                  <a href="javascript:void(0)" onclick="sortPrice()">Price</a>
-                                </div>
-                              </div> --}}
                               <select class="sort" name="filter" id="filter">
                                   <option id="sort_all" value="sort_all">All</option>
                                   <option id="name_sort" value="name_sort">Name</option>
@@ -37,7 +30,7 @@
                         </div>
                         <div class="cf-right">
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -52,7 +45,7 @@
                                 <div class="p-status sale">sale</div>
                             </figure>
                             <div class="product-text">
-                                <a href="{{route('product-detail.show', $item->id)}}">
+                                <a href="{{route('product-detail.show',$item->id)}}">
                                     <h6>{{$item->name_product}}</h6>
                                 </a>
                                 <p>{{ $item->price }}</p>

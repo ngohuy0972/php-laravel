@@ -1690,10 +1690,11 @@ ol {
 }
 
 .cart-table table .product-col .p-title {
-	display: table-cell;
-	vertical-align: middle;
+	display: block;
+	/* vertical-align: middle; */
 	padding-left: 30px;
 	padding-right: 15px;
+	margin-top: 15px;
 }
 
 .cart-table table .product-col .p-title h5 {
@@ -1705,7 +1706,7 @@ ol {
 	color: #1e1e1e;
 	font-size: 18px;
 	font-weight: 600;
-	width: 14%;
+	width: 23%;
 	padding-right: 15px;
 }
 

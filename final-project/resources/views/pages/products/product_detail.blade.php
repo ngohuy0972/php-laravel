@@ -67,19 +67,21 @@
                                 <i class="fa fa-star"></i>
                             </div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                            viverra maecenas accumsan lacus vel facilisis.</p>
+                        <p>Day la chi tiet mau cua san pham.</p>
                         <ul class="tags">
-                            <li><span>Category :</span> Men’s Wear</li>
+                            <li><span>Category :</span> {{ $item->categories}}</li>
                             <li><span>Tags :</span> man, shirt, dotted, elegant, cool</li>
                         </ul>
-                        <div class="product-quantity">
-                            <div class="pro-qty">
-                                <input type="text" value="1">
+                        <form action="{{ route('add_to_cart') }}" method="POST">
+                            {{ csrf_field() }}
+                            <input type="hidden" id="product_id" name="product_id" value="{{ $item->id }}">
+                            <div class="product-quantity">
+                                <div class="pro-qty">
+                                    <input type="text" id="pro_qty" name="pro_qty" value="1">
+                                </div>
                             </div>
-                        </div>
-                        <a href="#" class="primary-btn pc-btn">Add to cart</a>
+                            <input type="submit" class="primary-btn pc-btn" value="Add to cart"/>
+                        </form>
                         <ul class="p-info">
                             <li>Product Information</li>
                             <li>Reviews</li>
